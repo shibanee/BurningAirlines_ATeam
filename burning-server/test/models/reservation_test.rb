@@ -1,18 +1,18 @@
 # == Schema Information
 #
-# Table name: airplanes
+# Table name: reservations
 #
 #  id         :integer          not null, primary key
-#  name       :string
-#  rows       :text
-#  cols       :text
+#  user_id    :integer
+#  flight_id  :integer
+#  seat       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 require 'test_helper'
 
-class AirplaneTest < ActiveSupport::TestCase
+class ReservationTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
