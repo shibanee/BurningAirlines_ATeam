@@ -11,6 +11,7 @@ class SearchFlights extends Component {
   _handleSubmit(e) {
     e.preventDefault();
     this.props.onSubmit(this.state.query);
+    //Direct user to FlightResults;
   }
 
   _handleInput(e) {
