@@ -15,7 +15,9 @@
 one:
   user_id: 1
   flight_id: 1
+  seat: MyString
 
 two:
   user_id: 1
   flight_id: 1
+  seat: MyString
