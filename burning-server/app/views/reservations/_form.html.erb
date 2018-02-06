@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id, id: :reservation_user_id %>
-  </div>
-
-  <div class="field">
     <%= form.label :flight_id %>
     <%= form.number_field :flight_id, id: :reservation_flight_id %>
   </div>
 
   <div class="field">
-    <%= form.label :seat %>
-    <%= form.text_field :seat, id: :reservation_seat %>
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id, id: :reservation_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :reservation_name %>
   </div>
 
   <div class="actions">

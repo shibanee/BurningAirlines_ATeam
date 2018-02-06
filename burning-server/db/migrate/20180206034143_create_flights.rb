@@ -1,9 +1,10 @@
 class CreateFlights < ActiveRecord::Migration[5.1]
   def change
     create_table :flights do |t|
-      t.text :destination
-      t.text :origin
-      t.text :flight_no
+      t.string :flight_num
+      t.string :origin
+      t.string :destination
+      t.string :airplane_id
       t.date :date
 
       t.timestamps
