@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class SearchFlights extends Component {
+class SearchForm extends Component {
   constructor() {
     super();
     this.state = { query: "" };
@@ -30,4 +30,4 @@ class SearchFlights extends Component {
   }
 }
 
-export default SearchFlights;
+export default SearchForm;
