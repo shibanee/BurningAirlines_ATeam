@@ -4,7 +4,7 @@ a1 = Airplane.create name: "Virgin Airlines", rows: "20", cols: "6"
 a2 = Airplane.create name: "Qantas", rows: "20", cols: "6"
 a3 = Airplane.create name: "Emirates", rows: "20", cols: "6"
 
-puts "Created #{ Airplanes.all.length } airplanes."
+puts "Created #{ Airplane.all.length } airplanes."
 
 Flight.destroy_all
 
