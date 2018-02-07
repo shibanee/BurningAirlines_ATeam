@@ -3,6 +3,11 @@ import SearchForm from "./SearchForm";
 import FlightGallery from "./FlightGallery";
 
 class Home extends Component {
+
+  callHome(){
+
+  }
+
   render() {
     return (
       <div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180207024553) do
+ActiveRecord::Schema.define(version: 20180206052656) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,8 +21,6 @@ ActiveRecord::Schema.define(version: 20180207024553) do
     t.text "cols"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "airplane_code"
-    t.integer "seat"
   end
 
   create_table "flights", force: :cascade do |t|
@@ -38,19 +36,8 @@ ActiveRecord::Schema.define(version: 20180207024553) do
   create_table "reservations", force: :cascade do |t|
     t.integer "user_id"
     t.integer "flight_id"
-<<<<<<< HEAD
-    t.string "seat"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "searches", force: :cascade do |t|
-    t.text "origin"
-    t.text "destination"
-    t.date "date"
-=======
-    t.string "name"
->>>>>>> c8f051aaf285fff9c0d8dc4ebff7d0571ca8a3e2
+    t.text "seat_row"
+    t.text "seat_col"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
