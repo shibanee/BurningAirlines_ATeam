@@ -3,7 +3,7 @@ class CreateReservations < ActiveRecord::Migration[5.1]
     create_table :reservations do |t|
       t.integer :user_id
       t.integer :flight_id
-      t.string :seat
+      t.string :name
 
       t.timestamps
     end

@@ -1,18 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
-  <%= @reservation.user_id %>
-</p>
-
-<p>
   <strong>Flight:</strong>
   <%= @reservation.flight_id %>
 </p>
 
 <p>
-  <strong>Seat:</strong>
-  <%= @reservation.seat %>
+  <strong>User:</strong>
+  <%= @reservation.user_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @reservation.name %>
 </p>
 
 <%= link_to 'Edit', edit_reservation_path(@reservation) %> |
