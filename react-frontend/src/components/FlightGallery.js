@@ -32,7 +32,7 @@ function Gallery(props) {
             <td>{f.origin}</td>
             <td>{f.destination}</td>
           </tr>
-        ))};
+        ))}
       </table>
     </div>
   );
@@ -41,7 +41,6 @@ function Gallery(props) {
 class FlightGallery extends Component {
   constructor() {
     super();
-
     this.state = {
       flights: []
     };

@@ -12,7 +12,6 @@ function Gallery(props){
         <p key={ s.id }>
           <strong>Name:</strong> { s.name }<br/>
           <strong>Flight ID:</strong> { s.flight_id }<br/>
-          <strong>User ID:</strong> { s.user_id }<br/>
         </p> ) }
 
     </div>
