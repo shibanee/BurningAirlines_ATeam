@@ -8,12 +8,12 @@ puts "Created #{ Airplane.all.length } airplanes."
 
 Flight.destroy_all
 
-f1 = Flight.create destination: "Sydney", origin: "Melbourne", flight_no: "101", date: "01/02/2018"
-f2 = Flight.create destination: "Singapore", origin: "Sydney", flight_no: "102", date: "02/02/2018"
-f3 = Flight.create destination: "Honolulu", origin: "Melbourne", flight_no: "103", date: "03/02/2018"
-f4 = Flight.create destination: "Istanbul", origin: "Sydney", flight_no: "104", date: "01/02/2018"
-f5 = Flight.create destination: "Tokyo", origin: "Sydney", flight_no: "105", date: "01/01/2018"
-f6 = Flight.create destination: "Florence", origin: "Melbourne", flight_no: "106", date: "03/02/2018"
+f1 = Flight.create destination: "Sydney", origin: "Melbourne", flight_num: "101", date: "01/02/2018"
+f2 = Flight.create destination: "Singapore", origin: "Sydney", flight_num: "102", date: "02/02/2018"
+f3 = Flight.create destination: "Honolulu", origin: "Melbourne", flight_num: "103", date: "03/02/2018"
+f4 = Flight.create destination: "Istanbul", origin: "Sydney", flight_num: "104", date: "01/02/2018"
+f5 = Flight.create destination: "Tokyo", origin: "Sydney", flight_num: "105", date: "01/01/2018"
+f6 = Flight.create destination: "Florence", origin: "Melbourne", flight_num: "106", date: "03/02/2018"
 
 puts "Created #{ Flight.all.length } flights."
 

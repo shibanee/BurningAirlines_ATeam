@@ -10,11 +10,8 @@ function Gallery(props){
     <div>
       { props.airplanes.map( s =>
         <p key={ s.id }>
-          <strong>Name:</strong> { s.name }<br/>
-          <strong>Rows:</strong> { s.rows }<br/>
-          <strong>Columns:</strong> { s.cols }
+          <strong>Name:</strong> { s.name }
         </p> ) }
-
     </div>
   );
 }

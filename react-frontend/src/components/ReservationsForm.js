@@ -15,7 +15,7 @@ class reservationsForm extends Component {
 
   _handleSubmit( e ){
     e.preventDefault();
-    this.props.onSubmit( this.state.flight_num, this.state.name );
+    this.props.onSubmit( this.state.name, this.state.flight_num );
   }
 
   _handleChange( e ){

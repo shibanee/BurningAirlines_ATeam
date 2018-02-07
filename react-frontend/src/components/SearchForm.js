@@ -8,10 +8,9 @@ class SearchForm extends Component {
     this._handleSubmit = this._handleSubmit.bind(this);
   }
 
-  _handleSubmit(e) {
+  _handleSubmit( e ) {
     e.preventDefault();
     this.props.onSubmit(this.state.query);
-    //Direct user to FlightResults;
   }
 
   _handleInput(e) {
