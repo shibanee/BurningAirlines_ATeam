@@ -25,6 +25,7 @@ puts "Created #{ Flight.all.length } flights."
 
 
 
+
 User.destroy_all
 
 u1 = User.create name: "Jimmi", email: "Jimmi@gmail.com", admin: true, password_digest: "chicken"
