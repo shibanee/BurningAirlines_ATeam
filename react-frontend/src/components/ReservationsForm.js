@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 class reservationsForm extends Component {
-
   constructor(){
     super();
     this.state = {

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/flights/search' => 'flights#search'
   resources :reservations
   resources :users
   resources :flights

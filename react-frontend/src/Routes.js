@@ -5,7 +5,6 @@ import Home from "./components/Home";
 import ShowFlight from "./components/ShowFlight";
 import Airplanes from "./components/Airplanes";
 import Users from "./components/Users";
-import ShowFlight from "./components/ShowFlight";
 import Reservations from "./components/Reservations";
 
 const Routes = (

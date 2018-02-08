@@ -7,6 +7,13 @@ class FlightsController < ApplicationController
     @flights = Flight.all
   end
 
+  def search
+    puts params
+    @results = Flight.where("origin ILIKE ? AND destination ILIKE ?", "%#{ params[:origin] }%", "%#{ params[:destination] }%")
+
+    render json: @results, status: :ok
+  end
+
   # GET /flights/1
   # GET /flights/1.json
   def show

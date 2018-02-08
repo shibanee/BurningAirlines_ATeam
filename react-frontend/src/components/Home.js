@@ -1,18 +1,22 @@
 import React, {Component} from 'react';
-// import { Link } from 'react-router-dom';
 import SearchForm from './SearchForm';
-// import FlightGallery from "./FlightGallery";
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
-const SERVER_URL = 'http://localhost:3000/flights.json';
+
+const SEARCH_URL = 'http://localhost:3000/flights/search.json';
+
 
 function Gallery(props){
   return (
     <div>
-      { props.origin.map( s =>
-        <p key={ s.id }>
-          <strong>Name:</strong> { s.origin }</p> ) }
-
+      { props.flights.length
+        ?
+        props.flights.map( s =>
+        <p key={ s.id }> <strong>Destination:</strong> <Link to={`/flights/${s.id}`}>{ s.origin } - { s.destination }</Link></p> )
+        :
+        <p>Please enter an origin and destination above.</p>
+        }
     </div>
   );
 }
@@ -22,16 +26,21 @@ class Home extends Component {
   constructor(){
     super();
     this.state = {
-      origin: []
+      flights: []
     };
-    this.fetchOrigin = this.fetchOrigin.bind( this );
+    this.fetchResults = this.fetchResults.bind( this );
   }
 
-  fetchOrigin( query ){
-    console.log('Phoned home with:', query);
+  fetchResults( origin, destination ){
+    console.log('Phoned home with:', origin, destination);
     console.log('this: ', this);
     const fetchResults = () => {
-      axios.get(SERVER_URL).then( results => this.setState({origin: results.data}) );
+      axios.get(SEARCH_URL,
+      {
+        params: {
+          origin: origin,
+          destination: destination
+      }}).then( results => this.setState({flights: results.data}) );
       // setTimeout( fetchReservations, 3000 );
     };
     fetchResults();
@@ -41,8 +50,8 @@ class Home extends Component {
     return (
       <div>
         <h1>Flickr Search</h1>
-        <SearchForm onSubmit={ this.fetchOrigin } />
-        <Gallery origin={ this.state.origin }/><br/>
+        <SearchForm onSubmit={ this.fetchResults } />
+        <Gallery flights={ this.state.flights }/><br/>
       </div>
     );
   }
